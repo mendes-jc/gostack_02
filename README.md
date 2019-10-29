@@ -4,7 +4,7 @@ Esse projeto foi desenvolvido como resposta ao segundo desafio do bootcamp GoSta
 
 ## Principais pontos
 
-- Diferente do primeiro desafio, agora a aplicação possui um banco de dados para persistência dos dados. O banco de dados utilizado foi o **Postgres**, rodando em um container no **Docker**.
+- Diferente do primeiro desafio, agora a aplicação possui um banco de dados. O banco de dados utilizado foi o **Postgres**, rodando em um container no **Docker**.
 
 - Essa aplicação possui um sistema de autenticação que utiliza **Bearer Token**, construído com a biblioteca _**JsonWebToken**_.
 
@@ -19,6 +19,11 @@ Conforme citado anteriormente, para o banco de dados foi utilizada uma imagem do
 ```
 **Obs:** O parâmetro: **-e POSTGRES_PASSWORD=docker** definem a senha do banco como **docker**, que é a senha configurada por padrão no projeto.
 Caso deseje alterá-la, será necessário alterar também no arquivo /src/config/database.js.
+
+Se você não conhece o Docker, recomendo ler a documentação oficial clicando na imagem abaixo :)
+
+
+[![Docker](https://docs.docker.com/images/docker-docs-logo.svg)](https://docs.docker.com/)
 
 Para verificar se o container está rodando, execute:
 
@@ -50,7 +55,3 @@ Após isso, já será possível executar o projeto :). Para isso:
 ```bash
 yarn dev
 ```
-
-### Rotas da API
-
-Em breve.
