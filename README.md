@@ -22,11 +22,12 @@ Caso deseje alterá-la, será necessário alterar também no arquivo /src/config
 
 Se você não conhece o Docker, recomendo ler a documentação oficial clicando na imagem abaixo :)
 
-<div style="background-color:#0db7ed;width:150px;padding:2;padding-left:10px">
+<div style="width:200px">
 
-[![Docker](https://docs.docker.com/images/docker-docs-logo.svg)](https://docs.docker.com/)
+[![Docker](https://docs.docker.com/images/docs@2x.png)](https://docs.docker.com/)
 
 </div>
+
 Para verificar se o container está rodando, execute:
 
 ```bash
