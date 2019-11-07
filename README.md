@@ -1,6 +1,6 @@
-# GoStack 9.0 - Desafio 02
+# GoStack 9.0 - Desafio 02/03
 ***
-Esse projeto foi desenvolvido como resposta ao segundo desafio do bootcamp GoStack 9.0
+Esse projeto foi desenvolvido como resposta ao segundo e terceiro desafio do bootcamp GoStack 9.0
 
 ## Principais pontos
 
