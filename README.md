@@ -58,3 +58,5 @@ Após isso, já será possível executar o projeto :). Para isso:
 ```bash
 yarn dev
 ```
+
+### Em breve a documentação de todas as rotas...
