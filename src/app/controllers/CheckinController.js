@@ -1,5 +1,7 @@
-import Checkin from '../models/Checkin';
+import { subDays } from 'date-fns';
+import { Op } from 'sequelize';
 
+import Checkin from '../models/Checkin';
 import Student from '../models/Student';
 
 class CheckinController {
@@ -16,6 +18,9 @@ class CheckinController {
             // Aqui deve ser verificada a data, se é de 7 dias ou próximo
             where: {
                 student_id: id,
+                created_at: {
+                    [Op.gte]: subDays(new Date(), 7),
+                },
             },
         });
 
