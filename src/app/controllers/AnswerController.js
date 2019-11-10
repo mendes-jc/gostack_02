@@ -1,7 +1,9 @@
 import * as Yup from 'yup';
+
 import HelpOrder from '../models/HelpOrder';
-import Mail from '../lib/Mail';
+import Queue from '../lib/Queue';
 import Student from '../models/Student';
+import AnswerMail from '../jobs/AnswerMail';
 
 class AnswerController {
     async store(req, res) {
@@ -30,16 +32,12 @@ class AnswerController {
 
         const student = await Student.findByPk(helpOrder.student_id);
 
-        Mail.sendMail({
-            to: `${student.name} <${student.email}>`,
-            subject: 'Your help order was answered!',
-            template: 'helpAnswer',
-            context: {
-                name: student.name,
-                question: helpOrder.question,
-                answer,
-            },
+        await Queue.add(AnswerMail.key, {
+            student,
+            helpOrder,
+            answer,
         });
+
         return res.status(201).json({ message: 'ok' });
     }
 }
